@@ -35,7 +35,7 @@ module.exports = function(grunt) {
         options: {
           multiline: true,
           singleline: true,
-          keepSpecialComments: true
+          keepSpecialComments: false
         },
         cwd: 'test/origin/',
         src: '**/*.js',

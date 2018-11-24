@@ -8,19 +8,20 @@
 
 (function () {
   function add(a, b) {
-    return a + b;
+    return a + b;/** block comments. */
   }
-  window.add = add;
+  window.add = add;// line comments.
 })();
 
 (function () {
-  function sub(a, b) {
+  function sub(a, b) {/* another comment. block comment. */
     return a - b;
   }
   window.sub = sub;
 })();
-
-
 (function () {
   var a = /\/*[a-z]\\*/;
+  var regex = //*.*/;
+  var str = " /* not a real comment */ ";
+  alert("Blah blah blah");
 })()
