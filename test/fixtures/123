@@ -1,5 +1,0 @@
-var a = 123;
-var b = 234;
-function add(a, b) {
-  return a + b;
-}
