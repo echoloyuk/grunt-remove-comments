@@ -28,10 +28,10 @@
    * This is a test. multiline comments. 
    */
   function add(a, b) {
-    return a + b; /** block comments. */
+    return a + b;/** block comments. */
   }
   /* this is a single asterisk comment. singleline comments */
-  window.add = add; // line comments.
+  window.add = add;// line comments.
 })();
 
 /* ===================================
@@ -40,7 +40,7 @@
 =================================== */
 
 (function () {
-  function sub(a, b) { /* another comment. block comment. */
+  function sub(a, b) {/* another comment. block comment. */
     return a - b;
   }
   /**

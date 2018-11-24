@@ -8,13 +8,13 @@
 
 (function () {
   function add(a, b) {
-    return a + b; 
+    return a + b;
   }
-  window.add = add; 
+  window.add = add;
 })();
 
 (function () {
-  function sub(a, b) { 
+  function sub(a, b) {
     return a - b;
   }
   window.sub = sub;
