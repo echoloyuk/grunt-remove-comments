@@ -1,42 +1,60 @@
 /**
- * This is a test js file. for test comments syntax
+ * This js is a test.
  * multiline comments
  */
 
-/**
- * ES5
- * multiline comments
- */
+// function begins. singleline comments.
 (function () {
-  /** This is a test single line comments. single comments */
-  var a = 5;
-  var b = 6;
-  // This function is used in closure. single comments
-  function foo() {
+  var a = 1;
+  var b = 2;
+  /**
+   * foo is a function.
+   * Multiline comments
+   */
+  var foo = function () {
+    // direct return. sinle line comments.
     return a + b;
   }
-  foo();
-
-  /**
-   * 
-   * @param {*} _a add params1 
-   * @param {*} _b add params2
-   * returns _a + _b
-   */
-  function add(_a, _b) {
-    return _a + _b;
-  }
-
-  // mount on the global.
-  window.add = add;
+  // we do not return any function or var. singleline comments
 })();
 
-/**
- * Test for single line comments plugin in the code
- */
+// new function. single line comments.
+
 (function () {
-  function sub(a, b) { /** function name. single line comments */
+  /**
+   * Doc comments
+   * @param {*} a 
+   * @param {*} b
+   * This is a test. multiline comments. 
+   */
+  function add(a, b) {
+    return a + b; /** block comments. */
+  }
+  /* this is a single asterisk comment. singleline comments */
+  window.add = add; // line comments.
+})();
+
+/* ===================================
+  this is a title comment
+  multiline comments.
+=================================== */
+
+(function () {
+  function sub(a, b) { /* another comment. block comment. */
     return a - b;
   }
-  window.sub = sub; // mount in global. single line comments
+  /**
+   * this is a test comment
+   * multiline comments.
+   */
+  window.sub = sub;
+})();
+
+/*!
+ * An important comment
+ * taking up
+ * multiple lines
+ */
+(function () {
+  var a = /\/*[a-z]\\*/;
 })()

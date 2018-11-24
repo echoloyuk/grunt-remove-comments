@@ -17,9 +17,9 @@ module.exports = function(grunt) {
 
   grunt.registerMultiTask('remove_comments', 'To remove the comments in JS and CSS.', function() {
     var options = this.options({
-      multiline: false,
-      singleline: false,
-      keepSpecialComments: false
+      multiline: true,
+      singleline: true,
+      keepSpecialComments: true
     });
 
     // console.log(this.files);
