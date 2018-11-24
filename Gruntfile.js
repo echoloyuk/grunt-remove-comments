@@ -30,10 +30,16 @@ module.exports = function(grunt) {
 
     // Configuration to be run (and then tested).
     remove_comments: {
-      default_options: {
+      default: {
         options: {
+          multiline: true,
+          singleline: true,
+          keepSpecialComments: true
         },
-        src: 'test/origin/**/*.js',
+        cwd: 'test/origin/',
+        src: '**/*.js',
+        expand: true,
+        dest: 'test/dest/'
       },
     },
 

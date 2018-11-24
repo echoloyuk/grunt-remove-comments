@@ -17,8 +17,9 @@ module.exports = function(grunt) {
 
   grunt.registerMultiTask('remove_comments', 'To remove the comments in JS and CSS.', function() {
     var options = this.options({
-      punctuation: '.',
-      separator: ', '
+      multiline: false,
+      singleline: false,
+      keepSpecialComments: false
     });
 
     // console.log(this.files);
@@ -29,7 +30,6 @@ module.exports = function(grunt) {
           return false;
         } else {
           var content = grunt.file.read(filepath);
-
           content = removeComments(content, options);
           
           var dest = f.dest || filepath;
