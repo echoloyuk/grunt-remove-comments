@@ -2,23 +2,19 @@
   "name": "grunt-remove-comments",
   "description": "To remove the comments in JS and CSS. Support single line comments and mulitiline comments.",
   "version": "0.1.0",
-  "homepage": "https://github.com/mac/grunt-remove-comments",
-  "author": {
-    "name": "echoloyuk",
-    "email": "loyuk@sina.com",
-    "url": "www.himachi.cn"
-  },
+  "homepage": "https://github.com/echoloyuk/grunt-remove-comments",
+  "author": "echoloyuk <loyuk@sina.com> (http://www.himachi.cn)",
   "repository": {
     "type": "git",
     "url": "git://github.com/mac/grunt-remove-comments.git"
   },
   "bugs": {
-    "url": "https://github.com/mac/grunt-remove-comments/issues"
+    "url": "https://github.com/echoloyuk/grunt-remove-comments/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/mac/grunt-remove-comments/blob/master/LICENSE-MIT"
+      "url": "https://github.com/echoloyuk/grunt-remove-comments/blob/master/LICENSE-MIT"
     }
   ],
   "engines": {
@@ -35,5 +31,12 @@
   },
   "keywords": [
     "gruntplugin"
-  ]
+  ],
+  "main": "Gruntfile.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "dependencies": {},
+  "license": "MIT"
 }
