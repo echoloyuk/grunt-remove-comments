@@ -19,7 +19,8 @@ module.exports = function(grunt) {
     var options = this.options({
       multiline: true,
       singleline: true,
-      keepSpecialComments: false
+      keepSpecialComments: false,
+      linein: true
     });
 
     // console.log(this.files);

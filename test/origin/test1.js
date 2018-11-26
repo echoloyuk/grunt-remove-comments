@@ -57,7 +57,6 @@
  */
 (function () {
   var a = /\/*[a-z]\\*/;
-  var regex = //*.*/;
   var str = " /* not a real comment */ ";
   /*@cc_on @*/
   /*@if (@_jscript_version == 4)

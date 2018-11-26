@@ -34,8 +34,9 @@ module.exports = function(grunt) {
       default: {
         options: {
           multiline: true,
-          singleline: true,
-          keepSpecialComments: false
+          singleline: false,
+          keepSpecialComments: false,
+          linein: true
         },
         cwd: 'test/origin/',
         src: '**/*.js',
