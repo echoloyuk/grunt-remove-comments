@@ -2,7 +2,7 @@
 
 > To remove the comments in JS and CSS. Support single line comments and mulitiline comments.
 
-You can browse [中文说明](./README_cn.md) here.
+You can browse [中文说明](https://github.com/echoloyuk/grunt-remove-comments/blob/master/README_cn.md) here.
 
 ## Getting Started
 This plugin requires Grunt `~0.4.5`

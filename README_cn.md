@@ -2,7 +2,7 @@
 
 > To remove the comments in JS and CSS. Support single line comments and mulitiline comments.
 
-你可以浏览英文说明[English Readme](./README.md)
+你可以浏览英文说明[English Readme](https://github.com/echoloyuk/grunt-remove-comments/blob/master/README.md)
 
 ## First
 
