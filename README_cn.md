@@ -2,6 +2,8 @@
 
 > To remove the comments in JS and CSS. Support single line comments and mulitiline comments.
 
+你可以浏览英文说明[English Readme](./README.md)
+
 ## First
 
 当前插件需要的Grunt版本号为`~0.4.5`.
@@ -81,17 +83,22 @@ grunt.initConfig({
 
 #### Custom Options
 
-自定义配置允许你使用
+自定义配置允许你使用Grunt的基本配置，遵循grunt的src和dest文件标准。详情你可以参考[Grunt Option](https://www.gruntjs.net/configuring-tasks)。自定义配置允许你设置去除注释的类型，包含多行、单行、代码内单行等不同注释类型。
 
 ```js
 grunt.initConfig({
   remove_comments: {
-    options: {
-      separator: ': ',
-      punctuation: ' !!!',
-    },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
+    default: {
+      options: {
+        multiline: true,
+        singleline: false,
+        keepSpecialComments: false,
+        linein: true
+      },
+      cwd: 'test/origin/',
+      src: '**/*.js',
+      expand: true,
+      dest: 'test/dest/'
     },
   },
 });
