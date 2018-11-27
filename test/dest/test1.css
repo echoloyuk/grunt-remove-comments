@@ -1,0 +1,18 @@
+
+.mod-act {
+  background: #ffffe5;
+  _border-top: 1px solid #ffffe5;
+  padding: 20px 15px;
+}
+.mod-act .title {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.act-ticket {
+  vertical-align: middle;
+}
+
+/*# sourceMappingURL=index.css.map */
+
+span {color: #fff;} /*# sourceMappingURL=index.css.map */

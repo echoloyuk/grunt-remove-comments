@@ -43,6 +43,18 @@ module.exports = function(grunt) {
         expand: true,
         dest: 'test/dest/'
       },
+      css: {
+        options: {
+          multiline: true,
+          singleline: true,
+          keepSpecialComments: true,
+          linein: true
+        },
+        cwd: 'test/origin/',
+        src: '**/*.css',
+        expand: true,
+        dest: 'test/dest/'
+      }
     },
 
     // Unit tests.
