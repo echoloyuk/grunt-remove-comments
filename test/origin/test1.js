@@ -1,4 +1,5 @@
 /**
+ * 标准块注释，与行内注释
  * This js is a test.
  * multiline comments
  */
@@ -41,6 +42,7 @@
 
 (function () {
   function sub(a, b) {/* another comment. block comment. */
+    var c = 5; /* 测试 */ var d = 6; /** 测试 */
     return a - b;
   }
   /**
@@ -56,12 +58,10 @@
  * multiple lines
  */
 (function () {
-  var a = /\/*[a-z]\\*/;
-  var str = " /* not a real comment */ ";
   /*@cc_on @*/
   /*@if (@_jscript_version == 4)
   alert("JavaScript version 4");
   @else @*/
-  alert("Blah blah blah");
+  alert("Hello");
   /*@end @*/
 })()

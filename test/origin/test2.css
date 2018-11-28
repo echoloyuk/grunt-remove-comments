@@ -1,0 +1,12 @@
+/**
+ * 特殊校验
+ */
+div {
+  background: url(//www.taobao.com) no-repeat; /* comment */
+}
+div::after {
+  content: "/* 123 */"; /* comment */
+}
+div::before {
+  content: "//test"; /* comment */
+}

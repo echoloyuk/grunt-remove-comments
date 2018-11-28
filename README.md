@@ -1,10 +1,11 @@
 # grunt-remove-comments
 
-> To remove the comments in JS and CSS. Support single line comments and mulitiline comments.
+> A Grunt plugins: To remove the comments in JS and CSS. Support single line comments and mulitiline comments.
 
 You can browse [中文说明](https://github.com/echoloyuk/grunt-remove-comments/blob/master/README_cn.md) here.
 
 ## Getting Started
+
 This plugin requires Grunt `~0.4.5`
 
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
@@ -65,6 +66,14 @@ Default value: `true`
 
 Whether to remove a line-in comment that exists in the line of code, it can be interpreted as a single-line comment in the line of code with `/*` or `//`.
 
+#### options.isCssLinein
+Type: `Boolean`
+Default value: `false`
+
+当前要处理的批量文件是否是CSS文件。由于CSS文件和JS文件稍有区别，CSS中的`//`的注释是不合法且不支持的，因此，如果你需要处理CSS注释时，就不能去掉`//`开头的内容，例如`background: url(//www.your.com/img)`。将该字段设置为true，本插件将不会处理以`//`存在的内容。
+
+Whether the file currently being processed is a CSS file. Because of the CSS file and the JS file are slightly different, the comments like `//` in CSS is illegal and unsupported. Therefore, if you need to process CSS comments, you cannot remove the contents of `//`, for example ` Background: url(//www.your.com/img)`. Setting this option to `true` will not handle content that exists in `//`.
+
 ### Usage Examples
 
 #### Default Options
@@ -86,15 +95,16 @@ Custom configuration allows you to use Grunt's basic configuration, following gr
 
 The configuration below shows how to set the type of comment removal, including multiple line types, single lines, single lines within code, and more.
 
+For removing JS comments. You can write like this:
+
 ```js
 grunt.initConfig({
   remove_comments: {
-    default: {
+    js: {
       options: {
         multiline: true,
-        singleline: false,
-        keepSpecialComments: false,
-        linein: true
+        singleline: true,
+        keepSpecialComments: false
       },
       cwd: 'test/origin/',
       src: '**/*.js',
@@ -105,8 +115,28 @@ grunt.initConfig({
 });
 ```
 
-## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
+For removing CSS comments. You will see that `isCssLinein` is set to `true`:
+
+```js
+grunt.initConfig({
+  remove_comments: {
+    css: {
+      options: {
+        multiline: true,
+        singleline: true,
+        keepSpecialComments: true,
+        linein: true,
+        isCssLinein: true
+      },
+      cwd: 'test/origin/',
+      src: '**/*.css',
+      expand: true,
+      dest: 'test/dest/'
+    }
+  },
+});
+```
 
 ## Release History
-_(Nothing yet)_
+
+- 2018-11-24 birthday

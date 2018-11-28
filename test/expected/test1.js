@@ -15,12 +15,11 @@
 
 (function () {
   function sub(a, b) {
+    var c = 5;  var d = 6; 
     return a - b;
   }
   window.sub = sub;
 })();
-
-
 (function () {
-  var a = /\/*[a-z]\\*/;
+  alert("Hello");
 })()

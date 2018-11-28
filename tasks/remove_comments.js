@@ -20,7 +20,8 @@ module.exports = function(grunt) {
       multiline: true,
       singleline: true,
       keepSpecialComments: false,
-      linein: true
+      linein: true,
+      isCssLinein: false
     });
 
     // console.log(this.files);

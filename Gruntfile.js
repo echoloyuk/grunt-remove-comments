@@ -31,12 +31,11 @@ module.exports = function(grunt) {
 
     // Configuration to be run (and then tested).
     remove_comments: {
-      default: {
+      js: {
         options: {
           multiline: true,
-          singleline: false,
-          keepSpecialComments: false,
-          linein: true
+          singleline: true,
+          keepSpecialComments: false
         },
         cwd: 'test/origin/',
         src: '**/*.js',
@@ -48,7 +47,8 @@ module.exports = function(grunt) {
           multiline: true,
           singleline: true,
           keepSpecialComments: true,
-          linein: true
+          linein: true,
+          isCssLinein: true
         },
         cwd: 'test/origin/',
         src: '**/*.css',

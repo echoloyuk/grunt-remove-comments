@@ -28,11 +28,21 @@ exports.remove_comments = {
     done();
   },
   default_options: function(test) {
-    test.expect(1);
+    // test.expect(1);
+    var DEST = 'test/dest/';
+    var EXP = 'test/expected/';
+    // read all files
+    grunt.file.recurse(DEST, function (abspath, rootdir, subdir, filename) {
+      console.log(abspath, rootdir, subdir, filename);
+      var origin = grunt.file.read(DEST + filename);
+      var exp = grunt.file.read(EXP + filename);
+      test.equal(origin, exp, 'Verify: ' + DEST + filename);
+    });
+    
 
-    var actual = grunt.file.read('test/dest/test1.js');
-    var expected = grunt.file.read('test/expected/test1.js');
-    test.equal(actual, expected, 'Verify dest is correct');
+    // var actual = grunt.file.read('test/dest/test1.js');
+    // var expected = grunt.file.read('test/expected/test1.js');
+    // test.equal(actual, expected, 'Verify dest is correct');
 
     test.done();
   }

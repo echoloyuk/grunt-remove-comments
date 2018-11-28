@@ -1,22 +1,13 @@
-/*
-combined files : 
-
-*/
-
-.mod-act {
-  background: #ffffe5;
-  _border-top: 1px solid #ffffe5;
-  padding: 20px 15px;
+/**
+ * combined files : 
+ * 标准注释
+ */
+div {
+  width: 100px;
 }
-.mod-act .title {
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-
-.act-ticket {
-  vertical-align: middle;
-}
-
 /*# sourceMappingURL=index.css.map */
-
 span {color: #fff;} /*# sourceMappingURL=index.css.map */
+
+div {
+  width: 100px; /* comments */ height: 200px; /* comments */
+}

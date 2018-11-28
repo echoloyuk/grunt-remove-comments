@@ -1,16 +1,10 @@
-
-
 (function () {
   var a = 1;
   var b = 2;
   var foo = function () {
-    
     return a + b;
   }
-  
 })();
-
-
 
 (function () {
   function add(a, b) {
@@ -21,12 +15,11 @@
 
 (function () {
   function sub(a, b) {
+    var c = 5;  var d = 6; 
     return a - b;
   }
   window.sub = sub;
 })();
 (function () {
-  var a = /\/*[a-z]\\*/;
-  var str = " /* not a real comment */ ";
-  alert("Blah blah blah");
+  alert("Hello");
 })()

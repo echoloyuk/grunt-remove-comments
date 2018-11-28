@@ -1,6 +1,6 @@
 # grunt-remove-comments
 
-> To remove the comments in JS and CSS. Support single line comments and mulitiline comments.
+> 基于Grunt的删除CSS和JS中的注释的插件。
 
 你可以浏览英文说明[English Readme](https://github.com/echoloyuk/grunt-remove-comments/blob/master/README.md)
 
@@ -65,6 +65,12 @@ Default value: `true`
 
 是否去掉存在于代码行中的单行注释，它可以解释为代码行中以`/*` 或 `//`存在的单行注释。
 
+#### options.isCssLinein
+Type: `Boolean`
+Default value: `false`
+
+当前要处理的批量文件是否是CSS文件。由于CSS文件和JS文件稍有区别，CSS中的`//`的注释是不合法且不支持的，因此，如果你需要处理CSS注释时，就不能去掉`//`开头的内容，例如`background: url(//www.your.com/img)`。将该字段设置为true，本插件将不会处理以`//`存在的内容。
+
 
 ### Usage Examples
 
@@ -85,21 +91,44 @@ grunt.initConfig({
 
 自定义配置允许你使用Grunt的基本配置，遵循grunt的src和dest文件标准。详情你可以参考[Grunt Option](https://www.gruntjs.net/configuring-tasks)。自定义配置允许你设置去除注释的类型，包含多行、单行、代码内单行等不同注释类型。
 
+下面给出一个最通用的去除JS注释的配置，你可以这样写：
+
 ```js
 grunt.initConfig({
   remove_comments: {
-    default: {
+    js: {
       options: {
         multiline: true,
-        singleline: false,
-        keepSpecialComments: false,
-        linein: true
+        singleline: true,
+        keepSpecialComments: false
       },
       cwd: 'test/origin/',
       src: '**/*.js',
       expand: true,
       dest: 'test/dest/'
     },
+  },
+});
+```
+
+下面再给出一个通用的去除CSS注释的配置，你会看到`isCssLinein`被设置为`true`：
+
+```js
+grunt.initConfig({
+  remove_comments: {
+    css: {
+      options: {
+        multiline: true,
+        singleline: true,
+        keepSpecialComments: true,
+        linein: true,
+        isCssLinein: true
+      },
+      cwd: 'test/origin/',
+      src: '**/*.css',
+      expand: true,
+      dest: 'test/dest/'
+    }
   },
 });
 ```

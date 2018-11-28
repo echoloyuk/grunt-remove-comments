@@ -1,0 +1,9 @@
+div {
+  background: url(//www.taobao.com) no-repeat; 
+}
+div::after {
+  content: "/* 123 */"; 
+}
+div::before {
+  content: "//test"; 
+}
