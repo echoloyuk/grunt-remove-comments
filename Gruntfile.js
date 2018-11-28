@@ -54,6 +54,17 @@ module.exports = function(grunt) {
         src: '**/*.css',
         expand: true,
         dest: 'test/dest/'
+      },
+      tmp: {
+        options: {
+          multiline: true,
+          singleline: true,
+          keepSpecialComments: false
+        },
+        cwd: 'test/origin/',
+        src: 'test5.js',
+        expand: true,
+        dest: 'test/dest/'
       }
     },
 
