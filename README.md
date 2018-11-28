@@ -70,8 +70,6 @@ Whether to remove a line-in comment that exists in the line of code, it can be i
 Type: `Boolean`
 Default value: `false`
 
-当前要处理的批量文件是否是CSS文件。由于CSS文件和JS文件稍有区别，CSS中的`//`的注释是不合法且不支持的，因此，如果你需要处理CSS注释时，就不能去掉`//`开头的内容，例如`background: url(//www.your.com/img)`。将该字段设置为true，本插件将不会处理以`//`存在的内容。
-
 Whether the file currently being processed is a CSS file. Because of the CSS file and the JS file are slightly different, the comments like `//` in CSS is illegal and unsupported. Therefore, if you need to process CSS comments, you cannot remove the contents of `//`, for example ` Background: url(//www.your.com/img)`. Setting this option to `true` will not handle content that exists in `//`.
 
 ### Usage Examples
