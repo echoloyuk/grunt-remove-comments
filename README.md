@@ -52,7 +52,7 @@ Default value: `true`
 
 Whether to remove the comment of a single line. 
 
-Note: The single line comment is include the comments in a code line. There are a another option work on it.
+Note: The single line comment is NOT include the comments in a code line. There are a another option work on it.
 
 #### options.keepSpecialComments
 Type: `Boolean`
